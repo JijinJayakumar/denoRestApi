@@ -1,0 +1,24 @@
+{
+    "scripts": {
+        "start": {
+            "cmd": "deno run server.ts",
+            "desc": "Run the server.",
+            "allow": [
+                "all"
+            ]
+        }
+    },
+    "files": ["server.ts"],
+    "watcher": {
+        "interval": 350,
+        "exts": ["js", "ts", "json"],
+        "match": ["*.*"],
+        "skip": ["*/.git/*"],
+        "legacy": false
+    },
+    "execute": {
+        ".js": ["deno", "run"],
+        ".ts": ["deno", "run"]
+    },
+    "test": true
+}
