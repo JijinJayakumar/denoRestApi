@@ -9,7 +9,7 @@ install deno 1.0.1 +
 install denon 
 
 	clone the repo 
-	cd deno-rest-api
+	cd denoRestApi
 
 >   denon start
 
