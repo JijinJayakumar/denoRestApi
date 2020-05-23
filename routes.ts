@@ -1,13 +1,10 @@
-import { Router } from 'https://deno.land/x/oak/mod.ts'
-import capitalize  from 'https://deno.land/x/lodash/capitalize.js'
+import { Router } from "./packages.ts";
+import { SERVER_NAME } from "./env.js";
+const router = new Router();
 
-const router = new Router()
+router.get("/api/v1", (context) => {
+  let App = "node".split("").sort().join("");
+  context.response.body = { data: { greetings: `Hello from ${SERVER_NAME}!` } };
+});
 
-router.get('/api/v1', (context) => {
-    let App=capitalize("node".split("").sort().join(""))
-    context.response.body = 
-    { greetings:  `Hello from ${App}!` };
-   ;
-})
-
-export default router
+export default router;

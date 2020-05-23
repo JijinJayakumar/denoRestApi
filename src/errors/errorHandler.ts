@@ -1,8 +1,8 @@
-export default async ({ response }:{response:any}, nextFn:any) => {
-    try {
-      await nextFn();
-    } catch (err) {
-      response.status = 500;
-      response.body = { msg: err.message };
-    }
-  };
+export default async ({ response }: { response: any }, next: any) => {
+  try {
+    await next();
+  } catch (err) {
+    response.status = 500;
+    response.body = { data: { message: err.message } };
+  }
+};

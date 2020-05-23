@@ -6,7 +6,8 @@ Rest api implemenation with **Deno**
 
 ### Run
 install deno 1.0.1 +
-install denon 
+
+install denon (replacement of nodemon)
 
 	clone the repo 
 	cd denoRestApi

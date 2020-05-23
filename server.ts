@@ -1,27 +1,21 @@
-import {
-    Application
-} from "https://deno.land/x/oak/mod.ts";
+import { Application } from "./packages.ts";
+
+import { APP_PORT, APP_HOST, SERVER_NAME } from "./env.js";
 import router from "./routes.ts";
 import _404 from "./src/errors/404.ts";
 import errorHandler from "./src/errors/errorHandler.ts";
-
-const port = 8080;
 
 const app = new Application();
 
 app.use(errorHandler);
 app.use(router.routes());
 app.use(router.allowedMethods({
-    throw: true,
-    notImplemented: () => console.log("not implemented"),
-    methodNotAllowed: () => console.log("Method not allowed")
+  throw: true,
+  notImplemented: () => console.log("not implemented"),
+  methodNotAllowed: () => console.log("Method not allowed"),
 }));
 app.use(_404);
 
+console.log(`${SERVER_NAME} Listening on port ${APP_HOST} ${APP_PORT}...`);
 
-const ServerName = "node".split("").sort().join("")
-console.log(`${ServerName} Listening on port ${port}...`);
-
-await app.listen({
-    port
-});
+await app.listen(`${APP_HOST}:${APP_PORT}`);
