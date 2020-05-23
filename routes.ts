@@ -3,7 +3,6 @@ import { SERVER_NAME } from "./env.js";
 const router = new Router();
 
 router.get("/api/v1", (context) => {
-  let App = "node".split("").sort().join("");
   context.response.body = { data: { greetings: `Hello from ${SERVER_NAME}!` } };
 });
 
