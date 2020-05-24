@@ -7,5 +7,5 @@ export default async (
   const user = await User.deleteById(userId);
 
   response.status = 200;
-  response.body = { data: { message:"Deleted successfully", user } };
+  response.body = { data: { message: "Deleted successfully", user } };
 };
