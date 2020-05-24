@@ -15,18 +15,6 @@
             "cmd": "deno cache --reload --lock=packages.json --lock-write packages.ts",
             "desc": "create lock file with force reload"
         }
-    },
-    "files": ["server.ts"],
-    "watcher": {
-        "interval": 350,
-        "exts": ["js", "ts", "json"],
-        "match": ["*.*"],
-        "skip": ["*/.git/*"],
-        "legacy": false
-    },
-    "execute": {
-        ".js": ["deno", "run"],
-        ".ts": ["deno", "run"]
-    },
-    "test": true
+    }
+
 }

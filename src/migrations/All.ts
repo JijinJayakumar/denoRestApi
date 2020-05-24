@@ -4,17 +4,22 @@ export default async ({ response }: { response: any }) => {
   await db.sync({ drop: true });
   await User.create([
     {
+      name: "Nairobi",
+      password: "nairobi-Helsinki",
+      email: "nairobi@nairobi.com",
+    },
+    {
       name: "Tokyo",
-      password: "Tokyo",
-      email: "Tokyo@tokyo.com",
+      password: "tokyo-Río",
+      email: "tokyo@tokyo.com",
     },
     {
       name: "Berlin",
-      password: "Berlin",
-      email: "Berlin@berlin.com",
+      password: "berlin-tatiana",
+      email: "berlin@berlin.com",
     },
   ]);
 
-  response.status = 500;
+  response.status = 200;
   response.body = { data: { message: "Migration completed" } };
 };
