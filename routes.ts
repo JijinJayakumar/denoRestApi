@@ -7,7 +7,7 @@ const router = new Router();
 
 router.get("/api/v1", (context) => {
   context.response.body = { data: { greetings: `Hello from ${SERVER_NAME}!` } };
-})
+});
 router.get("/api/v1/migrate", Migrations);
 
 export default router;
