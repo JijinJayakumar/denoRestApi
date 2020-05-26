@@ -1,5 +1,5 @@
 import { Database } from "../../packages.ts";
-import { DB_HOST, DB_USER, DB_PASSWORD, DB_PORT, DB_NAME } from "../../env.js";
+import { DB_HOST, DB_USER, DB_PASSWORD, DB_PORT, DB_NAME } from "./env.js";
 
 const db = new Database("mysql", {
   host: DB_HOST,

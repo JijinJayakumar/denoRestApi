@@ -1,5 +1,5 @@
 import { Router } from "./packages.ts";
-import { SERVER_NAME } from "./env.js";
+import { SERVER_NAME } from "./src/config/env.js";
 
 import Migrations from "./src/migrations/All.ts";
 import allUsers from "./src/controller/allUsers.ts";

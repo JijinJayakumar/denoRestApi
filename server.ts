@@ -1,6 +1,6 @@
 import { Application } from "./packages.ts";
 
-import { APP_PORT, APP_HOST, SERVER_NAME } from "./env.js";
+import { APP_PORT, APP_HOST, SERVER_NAME } from "./src/config/env.js";
 import router from "./routes.ts";
 import _404 from "./src/errors/404.ts";
 import errorHandler from "./src/errors/errorHandler.ts";
